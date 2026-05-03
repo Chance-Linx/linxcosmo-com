@@ -1,0 +1,77 @@
+---
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="font-serif text-2xl font-semibold tracking-tight text-white group-hover:text-brand-gold transition-colors duration-300">
+          LINXCOSMO
+        </span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#about" class="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors duration-300 tracking-wide uppercase">About</a>
+        <a href="#categories" class="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors duration-300 tracking-wide uppercase">Collections</a>
+        <a href="#values" class="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors duration-300 tracking-wide uppercase">Values</a>
+        <a href="#contact" class="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors duration-300 tracking-wide uppercase">Contact</a>
+      </div>
+      
+      <!-- CTA Button -->
+      <a href="#contact" class="hidden md:inline-flex items-center px-6 py-2.5 border border-white/30 text-sm font-medium text-white hover:bg-white hover:text-brand-black transition-all duration-300 tracking-wide uppercase">
+        Get in Touch
+      </a>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-brand-black/95 backdrop-blur-lg">
+    <div class="px-6 py-8 space-y-6">
+      <a href="#about" class="block text-lg font-medium text-white/80 hover:text-brand-gold transition-colors">About</a>
+      <a href="#categories" class="block text-lg font-medium text-white/80 hover:text-brand-gold transition-colors">Collections</a>
+      <a href="#values" class="block text-lg font-medium text-white/80 hover:text-brand-gold transition-colors">Values</a>
+      <a href="#contact" class="block text-lg font-medium text-white/80 hover:text-brand-gold transition-colors">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  // Navbar scroll effect
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+      navbar.classList.add('bg-brand-black/90', 'backdrop-blur-md', 'shadow-lg');
+    } else {
+      navbar.classList.remove('bg-brand-black/90', 'backdrop-blur-md', 'shadow-lg');
+    }
+    
+    lastScroll = currentScroll;
+  });
+  
+  // Mobile menu toggle
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
