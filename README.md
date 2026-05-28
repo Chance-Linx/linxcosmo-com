@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+# LinxCosmo — Brand Website
 
-```sh
-npm create astro@latest -- --template minimal
+Static brand landing page for **LinxCosmo LLC**, built with Astro + Tailwind CSS.
+
+A dynamic and innovative company dedicated to enhancing everyday life through unique and creative lifestyle products.
+
+## Tech Stack
+
+- **Astro v6** — static site (`output: 'static'`)
+- **Tailwind CSS v4** — CSS-based config via `@theme` directive
+
+## Commands
+
+```bash
+npm run dev        # local server at localhost:4321
+npm run build      # outputs to dist/
+npm run preview    # preview build locally
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Sections
 
-## 🚀 Project Structure
+- **Hero** — Full-viewport background image with brand tagline
+- **Our Company** — About us with brand story and company image
+- **Footer** — Contact info, navigation, legal links, newsletter, social media
 
-Inside of your Astro project, you'll see the following folders and files:
+## Deployment
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Static site output in `dist/` — deploy to Cloudflare Pages, Netlify, or any static host.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Company
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Linxcosmo LLC · 55th Broadway Str. NY · +1 612-888-5122
